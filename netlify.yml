@@ -1,0 +1,10 @@
+[build]
+command = "npm run build"
+[[redirects]]
+from = "/old-url"
+to = "/new-url"
+status = 301
+[[headers]]
+for = "/*.html"
+  [headers.values]
+  X-Frame-Options = "DENY"
