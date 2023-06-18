@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./src/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form id="search-form">
+        <input type="text" id="cityInput" placeholder="Enter a city">
+        <button onclick="searchWeather()">Search</button>
+      </form>
+      <div id="locationButton">
+        <button onclick="getCurrentLocation()">Current Location</button>
+    </div>
+
+    <div id="result">
+        <h2 id="cityName"></h2>
+        <p id="temperature"></p>
+    </div>
+    
+      </div>
+      <div class="weather-container">
+        <div class="weather-icon">
+          <img src="images/sunny.png" alt="Icon Description" class="icon" />
+        </div>
+        <div class="weather-info">
+          <p class="weather-description">Sunny</p>
+          <p>Temperature: <span class="temperature">25°C</span></p>
+          <p>Humidity: <span class="humidity">80%</span></p>
+          <p>Wind Speed: <span class="wind-speed">10 km/h</span></p>
+        </div>
+      </div>
+      <div class="forecast-container">
+        <div class="forecast-day">
+          <div class="forecast-icon">
+            <img src="images/sunny.png" alt="Icon Description" class="icon" />
+          </div>
+          <p class="forecast-description">Sunny</p>
+        </div>
+        <div class="forecast-day">
+          <div class="forecast-icon">
+            <img src="images/rainy.png" alt="Icon Description" class="icon" />
+          </div>
+          <p class="forecast-description">Rainy</p>
+        </div>
+        <div class="forecast-day">
+          <div class="forecast-icon">
+            <img src="images/cloudy.png" alt="Icon Description" class="icon" />
+          </div>
+          <p class="forecast-description">Cloudy</p>
+        </div>
+        <div class="forecast-day">
+          <div class="forecast-icon">
+            <img
+              src="images/partlycloudy.png"
+              alt="Icon Description"
+              class="icon"
+            />
+          </div>
+          <p class="forecast-description">Partly Cloudy</p>
+        </div>
+        <div class="forecast-day">
+          <div class="forecast-icon">
+            <img
+              src="images/thunderstorm.png"
+              alt="Icon Description"
+              class="icon"
+            />
+          </div>
+          <p class="forecast-description">Thunderstorm</p>
+        </div>
+      </div>
+    </div>
+    <div id="datetime"></div>
+
+
+    <div id="search-result"></div>
+
+    <div id="temperature">
+      <span id="celsius">17</span>°C |
+      <a href="#" id="convert">Convert to Fahrenheit</a>
+    </div>
+  </body>
+</html>
